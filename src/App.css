@@ -11,6 +11,7 @@ header div {
   font-size: 30px;
   gap: 20px;
   color: #5c48d3;
+  font-weight: bold;
 }
 
 main {
@@ -21,6 +22,68 @@ main {
   margin: 200px;
 }
 
+.counter-reset-box {
+  display: flex;
+  margin: 50px 0px;
+  gap: 100px;
+}
+.counter-box {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: space-around;
+  width: 209px;
+}
+
+.score-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5c48d3;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+.incdecr-box {
+  width: 52.5px;
+  height: 60px;
+}
+.incdecr-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  border: none;
+  font-weight: bolder;
+  background-color: white;
+}
+
+.reset-button {
+  background-color: #5c48d3;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-button {
+  background-color: #5c48d3;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -7,24 +7,8 @@ import { FaStopwatch } from "react-icons/fa";
 
 const App = () => {
   // Tableau de counter
+
   const [counterTab, setCounterTab] = useState([]);
-
-  // Un counter
-  const counter = {
-    counter: Number,
-    id: Number,
-  };
-
-  const removeOnclick = () => {
-    setCounter(counter - 1);
-  };
-
-  const AddOnClick = () => {
-    setCounter(counter + 1);
-  };
-
-  console.log(console.log(copyTab));
-
   return (
     <>
       <header>
@@ -33,27 +17,32 @@ const App = () => {
         </div>
       </header>
       <main>
-        <button
-        // onClick={() => {
-        // counterTab.push(
-        //   "tata"
-        //   // <CounterBox counter={counter} setCounter={setCounter} />
-        // );
-        // }}
-        >
-          Add Counter
-        </button>
-        <div>
+        {counterTab.length < 3 && (
+          <button
+            onClick={() => {
+              const counterTabCopy = [...counterTab];
+              counterTabCopy.push({
+                counterValue: 0,
+                id: counterTab.length,
+              });
+              setCounterTab(counterTabCopy);
+            }}
+            className="add-button">
+            Add Counter
+          </button>
+        )}
+        <div className="counter-reset-box">
           {counterTab.map((element) => {
-            return <div>{element}</div>;
+            return (
+              <CounterBox
+                counterValue={element.counterValue}
+                setCounterTab={setCounterTab}
+                counterTab={counterTab}
+                id={element.id}
+              />
+            );
           })}
         </div>
-        <button
-          onClick={() => {
-            counterTab.push(counter);
-          }}>
-          Reset
-        </button>
       </main>
       <Footer />
     </>
